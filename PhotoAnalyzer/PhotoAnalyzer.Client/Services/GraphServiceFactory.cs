@@ -12,7 +12,6 @@ namespace PhotoAnalyzer.Client.Services
     {
         public string? ClientId { get; set; }
         public string? TenantId { get; set; }
-        public string? ClientSecret { get; set; }
         public string? RedirectUri { get; set; }
     }
 
@@ -29,12 +28,12 @@ namespace PhotoAnalyzer.Client.Services
         {
             var scopes = new[] { "https://graph.microsoft.com/.default" };
 
-            var credential = new AuthorizationCodeCredential(
-                _options.TenantId,
-                _options.ClientId,
-                _options.ClientSecret,
-                _options.RedirectUri
-            );
+            var credential = new InteractiveBrowserCredential(new InteractiveBrowserCredentialOptions
+            {
+                TenantId = _options.TenantId,
+                ClientId = _options.ClientId,
+                RedirectUri = new Uri(_options.RedirectUri?? "http://localhost:3000"),
+            });
 
             return new GraphServiceClient(credential, scopes);
         }
