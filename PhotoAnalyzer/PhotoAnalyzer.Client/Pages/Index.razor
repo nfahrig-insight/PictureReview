@@ -1,16 +1,19 @@
 @page "/"
 
+
 <h1>Welcome to PhotoAnalyzer</h1>
 
 <p>This app lets you connect your Microsoft account and analyze your OneDrive photos.</p>
 
+<AuthStatus />
+
 <button class="btn btn-primary" @onclick="GoToLogin">Sign in with Microsoft</button>
 
 @code {
-    [Inject] NavigationManager Navigation { get; set; } = default!;
+    [Inject] NavigationManager NavManager { get; set; } = default!;
 
     private void GoToLogin()
     {
-        Navigation.NavigateTo("/login");
+        NavManager.NavigateTo("/login");
     }
 }
