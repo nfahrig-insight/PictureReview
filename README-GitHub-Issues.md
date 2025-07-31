@@ -41,6 +41,19 @@ The CSV file contains 19 user stories covering:
 - **API features:** REST endpoints for photo management
 - **UX features:** Daily limits, user actions (Keep/Archive/Delete)
 
+## Epic Breakdown: Authentication (Issue #18)
+
+Issue #18 "Secure OneDrive authentication" has been expanded into a comprehensive epic with 6 sub-issues:
+
+1. **Issue #20**: Setup Microsoft Graph API integration and Azure App Registration
+2. **Issue #21**: Implement OAuth2 authentication flow in Blazor UI  
+3. **Issue #22**: Create database schema for user authentication
+4. **Issue #23**: Implement secure token storage and encryption
+5. **Issue #24**: Build token refresh mechanism for background service
+6. **Issue #25**: Integrate authentication with background photo scanning service
+
+This epic covers the complete authentication flow from initial user login through background service integration.
+
 ## Labels Used:
 - `backend` - Server-side functionality
 - `frontend` - User interface components  
