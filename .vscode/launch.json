@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch PhotoAnalyzer.Client (Blazor WASM)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "https://localhost:7000",
+      "webRoot": "${workspaceFolder}/PhotoAnalyzer/PhotoAnalyzer.Client",
+      "preLaunchTask": "build-client",
+      "presentation": {
+        "hidden": false
+      }
+    }
+  ]
+}
