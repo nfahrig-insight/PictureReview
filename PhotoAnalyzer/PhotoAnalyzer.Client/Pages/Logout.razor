@@ -1,0 +1,18 @@
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+<RemoteAuthenticatorView Action="logout">
+    <Authorized>
+        <button class="btn btn-secondary" @onclick="BeginLogout">Logout</button>
+    </Authorized>
+    <NotAuthorized>
+        <p>You are not signed in.</p>
+    </NotAuthorized>
+</RemoteAuthenticatorView>
+
+@code {
+    private void BeginLogout()
+    {
+        Navigation.NavigateTo("authentication/logout");
+    }
+    [Inject] NavigationManager Navigation { get; set; } = default!;
+}
