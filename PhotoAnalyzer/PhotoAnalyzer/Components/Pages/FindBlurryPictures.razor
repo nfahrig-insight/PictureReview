@@ -1,0 +1,57 @@
+﻿@page "/runtask"
+@inject HttpClient Http
+
+<h3>Run Server Task</h3>
+
+<button class="btn btn-primary" @onclick="RunServerTask" disabled="@isRunning">
+    @(isRunning ? "Running..." : "Run Task")
+</button>
+
+@if (!string.IsNullOrEmpty(message))
+{
+    <div class="alert alert-info mt-2">@message</div>
+}
+
+@code {
+    private bool isRunning = false;
+    private string? message;
+    private string? taskId;
+    private string? status;
+    private async Task RunServerTask()
+    {
+        isRunning = true;
+        message = string.Empty;
+        try
+        {
+            // Adjust the endpoint as needed
+            var response = await Http.PostAsync("api/ServerTask/run", null);
+            taskId = await response.Content.ReadAsStringAsync();
+            await PollStatus();
+            
+        }
+        catch (Exception ex)
+        {
+            message = $"Error: {ex.Message}";
+        }
+        isRunning = false;
+    }
+    private async Task PollStatus()
+    {
+        while (true)
+        {
+            status = await Http.GetStringAsync($"api/ServerTask/status/{taskId}");
+            if (status == "Completed" || status == "Failed")
+                break;
+            await Task.Delay(2000); // Wait 2 seconds before polling again
+        }
+        isRunning = false;
+        if (status == "Completed")
+        {
+            message = "Task completed successfully!";
+        }
+        else
+        {
+            message = "Task failed to run.";
+        }
+    }
+}

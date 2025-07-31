@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoAnalyzer", "PhotoAnalyzer\PhotoAnalyzer\PhotoAnalyzer.csproj", "{4E438A98-03E3-4E1B-BC43-85AAA2E40C71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoAnalyzer.Client", "PhotoAnalyzer\PhotoAnalyzer.Client\PhotoAnalyzer.Client.csproj", "{8667CF57-4E7A-4368-A562-97E6F2EEBE12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E438A98-03E3-4E1B-BC43-85AAA2E40C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E438A98-03E3-4E1B-BC43-85AAA2E40C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E438A98-03E3-4E1B-BC43-85AAA2E40C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E438A98-03E3-4E1B-BC43-85AAA2E40C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8667CF57-4E7A-4368-A562-97E6F2EEBE12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8667CF57-4E7A-4368-A562-97E6F2EEBE12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8667CF57-4E7A-4368-A562-97E6F2EEBE12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8667CF57-4E7A-4368-A562-97E6F2EEBE12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {861F4BDB-7681-4312-A2A2-1FD5F204DF1B}
+	EndGlobalSection
+EndGlobal
