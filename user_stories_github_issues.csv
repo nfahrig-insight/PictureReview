@@ -1,0 +1,20 @@
+title,body,labels
+Scan OneDrive photos at night,"As a user, I want the system to automatically scan my OneDrive photos at night so that it doesn’t interfere with my daytime usage.",backend
+Identify and group similar photos,"As a user, I want the system to identify and group similar photos so I can easily review duplicates.",backend
+Detect blurry photos,"As a user, I want the system to detect blurry photos so I can remove low-quality images.",backend
+Implement similarity detection algorithm,"As a developer, I want to implement a similarity detection algorithm to compare photos based on visual features.",backend
+Implement blurriness detection algorithm,"As a developer, I want to implement a blurriness detection algorithm to flag unclear images.",backend
+Notify user of photos ready for review,"As a user, I want to be notified daily when there are photos ready for review so I can manage my storage regularly.",backend
+Limit daily photo review to 30,"As a user, I want to review up to 30 photos per day so the task remains manageable.",UX
+"Choose Keep, Archive, or Delete","As a user, I want to choose to Keep, Archive, or Delete each photo so I have control over my content.",UX
+Visual comparison of similar photos,"As a user, I want to see a visual comparison of similar photos so I can make informed decisions.","frontend,UX"
+Responsive web interface for review,"As a user, I want a clean and responsive web interface to review and act on flagged photos.",frontend
+Preview photo in full resolution,"As a user, I want to preview each photo in full resolution before making a decision.",frontend
+Display photo metadata,"As a user, I want to see metadata (e.g., date, location) for each photo to help with my decision.",frontend
+API to fetch daily photo batch,"As a developer, I want an API endpoint to fetch the daily batch of photos for review.",api
+API to record user actions,"As a developer, I want an API endpoint to record the user’s action (Keep, Archive, Delete) for each photo.",api
+Archive action downloads photo,"As a developer, I want the Archive action to download the photo to a configurable local storage path.","backend,api"
+Delete action removes photo from OneDrive,"As a developer, I want the Delete action to remove the photo from OneDrive using Microsoft Graph API.","backend,api"
+Keep action marks photo as reviewed,"As a developer, I want the Keep action to mark the photo as reviewed without making changes.","backend,api"
+Secure OneDrive authentication,"As a user, I want to securely authenticate with my OneDrive account so the app can access my photos.",backend
+Comply with Microsoft API permissions,"As a developer, I want to ensure that all photo access and actions comply with Microsoft’s API permissions and privacy policies.",backend
