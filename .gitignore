@@ -347,4 +347,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 #configs
-*.development.json
+PhotoAnalyzer/appsettings.Development.json
