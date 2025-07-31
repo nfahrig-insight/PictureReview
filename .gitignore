@@ -38,6 +38,8 @@ bld/
 #wwwroot/
 
 # Visual Studio 2017 auto generated files
+# Ignore all appsettings.Development.json files
+**/appsettings.Development.json
 Generated\ Files/
 
 # MSTest test Results
